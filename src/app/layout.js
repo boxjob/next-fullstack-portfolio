@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} cz-shortcut-listen="true" >
-        <section className="container mx-auto min-h-screen flex flex-col justify-between">
+        <section className="container mx-auto min-h-screen">
           <Navbar/>
           {children}
           <Footer/>
