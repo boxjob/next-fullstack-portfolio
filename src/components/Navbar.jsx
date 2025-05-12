@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { DarkMode } from './DarkMode';
 
 const links = [
   {
@@ -39,6 +40,7 @@ export const Navbar = () => {
     <div className='h-[140px] flex justify-between items-center'>
         <Link className='font-bold text-xl' href='/'>BOXJOB</Link>
         <nav className='flex items-center gap-4'>
+          <DarkMode />
            {links.map( item => 
             <Link 
                 key={ item.id } 

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,11 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} cz-shortcut-listen="true" >
-        <section className="container mx-auto min-h-screen">
-          <Navbar/>
-          {children}
-          <Footer/>
-        </section>
+        <ThemeProvider>
+          <section className="container mx-auto min-h-screen flex flex-col justify-between">
+              <Navbar/>
+              {children}
+              <Footer/>
+          </section>
+        </ThemeProvider>
       </body>
     </html>
   );

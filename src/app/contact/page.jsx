@@ -3,13 +3,15 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <div className='w-7xl mx-auto mb-10'>
+    <div className=''>
+      
       <h1 className='font-black text-5xl text-center mb-10'>Let's Keep in Touch</h1>
-      <div className='grid grid-cols-2 gap-24 items-center'>
-        <div>
-          <Image src='/contact.png' width={500} height={500} alt=''/>
+      
+      <div className='max-w-7xl mx-auto grid grid-cols-2 gap-24 items-center'>
+        <div className='h-full relative'>
+          <Image src='/contact.png' width={500} height={500} objectFit="contain" alt=''/>
         </div>
-        <div className='max-w-xl'>
+        <div className=''>
           <form action="" className='flex flex-col space-y-4'>
             <input type="text" name='name' placeholder='Name' className='border outline-none px-3 py-2' />
             <input type="email" name='email' placeholder='E-mail' className='border outline-none px-3 py-2' />
@@ -18,6 +20,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
+
     </div>
   )
 }
